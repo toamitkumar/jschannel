@@ -1,0 +1,17 @@
+{
+  "name": "jschannel.com",
+  "version": "1.1.0",
+  "description": "JSChannel website",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "jschannel"
+  ],
+  "author": "Amit Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^8.1.0"
+  }
+}
