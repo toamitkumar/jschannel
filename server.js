@@ -8,8 +8,9 @@ var Hapi = require('hapi'),
 var app = {};
 // app.config = Config;
 
+var port = process.env.PORT || 5000;
 var server = new Hapi.Server();
-server.connection({ port: 8000});
+server.connection({ port: port});
 
 server.route(Routes.endpoints);
 
