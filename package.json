@@ -2,14 +2,18 @@
   "name": "jschannel.com",
   "version": "1.1.0",
   "description": "JSChannel website",
-  "engine": "node >= 0.10.26",
+  "engine": {
+    "node >= 0.10.26"
+  },
   "main": "app.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/toamitkumar/jschannel.git"
   },
   "scripts": {
-    "test": "npm test"
+    "start": "node server.js",
+    "test": "npm test",
+    "postinstall": "cd client && npm install && bower install && gulp build"
   },
   "keywords": [
     "jschannel"
