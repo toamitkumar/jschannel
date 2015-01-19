@@ -33,6 +33,20 @@ angular.module('jschannel')
             size: 'lg'
           });
           break;
+        case 'meetup':
+          modalInstance = $modal.open({
+            templateUrl: 'components/modals/meetup.html',
+            controller: 'MeetupController',
+            size: 'lg'
+          });
+          break;
+        case 'conduct':
+          modalInstance = $modal.open({
+            templateUrl: 'components/modals/codeofconduct.html',
+            controller: 'ModalInstanceCtrl',
+            size: 'lg'
+          });
+          break;
       }
     };
   });

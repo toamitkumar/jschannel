@@ -13,6 +13,7 @@ exports.endpoints = [
 		path: '/api/meetups', 
 		config: {
 			handler: meetup.meetups
+			// cors: {origin: ['http://localhost:8000']}
 		}
 	},
 	{ method: 'GET', 
@@ -20,5 +21,9 @@ exports.endpoints = [
 		config: {
 			handler: meetup.details
 		}
+	},
+	{
+		method: 'POST',
+		path: '/api/subscribes'
 	}
 ];

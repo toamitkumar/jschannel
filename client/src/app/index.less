@@ -83,9 +83,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .embeded-video {
+	background-color: #F9F9F9;
 	padding: 15px;
 	-webkit-border-radius: 10px;
-	-webkit-box-shadow: 0 2px 3px #5188a3;
+	-webkit-box-shadow: 0 8px 10px #5188a3;
 	background: -webkit-linear-gradient(top, rgba(238,238,238,0.5) 0%,rgba(204,204,204,0.57) 100%);
 
 	@media(min-width:768px) {
@@ -112,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 	box-shadow: 0 1px 0 0 #999999;
 	background-color: #f0f0f0;
 	border: 1px solid #999999;
-	padding: 13px 20px 13px 10px;
+	padding: 14px 20px 12px 10px;
 	width: 240px;
 	color: #999999;
 	font-size: 15px;
@@ -425,9 +426,16 @@ section {
 // Timeline
 
 .jsc-modal {
-	width: 900px;
-	@media(max-width:375px) {
-		width: 330px
+	//width: 900px;
+	@media(max-width:320px) {
+		width: 300px;
+		.h2-mobile;
+		.h4-mobile;
+	}
+	@media (min-width:325px) and (max-width:414px) {
+		width: 350px;
+		.h2-mobile;
+		.h4-mobile;
 	}
 
 	.close-modal {
@@ -435,7 +443,7 @@ section {
 	  width:75px;
 	  height:75px;
 	  background-color:transparent;
-	  top: 25px;
+	  top: 0px;
 	  right: 25px;
 	  cursor: pointer;
 	  &:hover {
@@ -452,6 +460,12 @@ section {
       -webkit-transform: rotate(45deg);
       /* Safari and Chrome */
       z-index:1051;
+
+      @media(max-width:375px) {
+      	height: 50px;
+      	margin-left: 65px;
+      }
+
       .rl {
         height:75px;
         width:1px;
@@ -462,11 +476,22 @@ section {
         -webkit-transform: rotate(90deg);
         /* Safari and Chrome */
         z-index:1052;
+
+        @media(max-width:375px) {
+        	height: 50px;
+        }
       }            
-	  }        
+	  }
+
+	  @media(min-width:320px) {
+	  	top: -15px;
+	  }
 	}
 	.closemodal-button {
 		text-align: center;
+		@media(max-width:375px) {
+			margin-bottom: 10px;
+		}
 	}
 
 }
@@ -1374,4 +1399,33 @@ body {
 .kp-filter ul.ss-links li.year a {
     font-size:26px;
     font-weight:400;
+}
+
+.code-conduct {
+	padding: 10px;
+	margin: 15px 0;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+
+.code-conduct-info {
+	border-left-color: #468847;
+	h4 {
+		color: #468847;
+	}
+}
+
+.code-conduct-info-shorter {
+	border-left-color: @brand-primary;
+	h4 {
+		color: @brand-primary;
+	}
+}
+
+.code-conduct-info-longer {
+	border-left-color: #f0ad4e;
+	h4 {
+		color: #f0ad4e;
+	}
 }
