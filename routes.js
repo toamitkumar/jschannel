@@ -21,9 +21,9 @@ exports.endpoints = [
 		config: {
 			handler: meetup.details
 		}
-	},
-	{
-		method: 'POST',
-		path: '/api/subscribes'
-	}
+	}//,
+	// {
+	// 	method: 'POST',
+	// 	path: '/api/subscribes'
+	// }
 ];
