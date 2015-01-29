@@ -18,10 +18,13 @@
   "author": "Amit Kumar",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^8.1.0",
-    "superagent": "^0.21.0",
     "async": "*",
+    "boom": "^2.6.1",
+    "hapi": "^8.1.0",
+    "joi": "^5.1.0",
     "lodash": "*",
-    "qs": "*"
+    "mongoose": "^3.8.21",
+    "qs": "*",
+    "superagent": "^0.21.0"
   }
 }

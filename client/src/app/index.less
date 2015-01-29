@@ -21,7 +21,7 @@ body {
 }
 
 .text-muted {
-	color: @gray;
+	color: @gray-muted;
 }
 
 .text-primary {
@@ -63,6 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-darkest-gray {
 	background-color: @gray-darkest;
+	.background-cover;
+	background-attachment: fixed;
 }
 
 // Restyled Primary Buttons
@@ -131,6 +133,12 @@ h1, h2, h3, h4, h5, h6 {
 //		text-align: right;
 //	}
 	padding-bottom: 15px;
+	form.ng-submitted {
+		input.ng-invalid {
+			border-color: red;
+	  	border-width: 2px;
+	  }
+	}
 }
 
 .sponsor {
@@ -210,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 	.nav-text {
 		color: @gray-darkest;
 		a {
-			color: @gray;
+			color: #ffd35c;
 		}
 		a:hover {
 			color: white;
@@ -251,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
 	background-image: url('../assets/images/header-bg.jpg');
 	background-repeat: none;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-position: center center;
 	.background-cover;
 	text-align: center;
@@ -311,9 +319,10 @@ header {
 section {
     padding: 100px 0;
     h2.section-heading {
-		font-size: 40px;
-		margin-top: 0;
-		margin-bottom: 15px;
+			font-size: 40px;
+			margin-top: 0;
+			margin-bottom: 15px;
+			color: #ffffff;
     }
     h3.section-subheading {
 		font-size: 16px;
@@ -484,7 +493,7 @@ section {
 	  }
 
 	  @media(min-width:320px) {
-	  	top: -15px;
+	  	//top: -15px;
 	  }
 	}
 	.closemodal-button {
@@ -585,7 +594,7 @@ section {
 	.timeline-heading {
 		h4 {
 		    margin-top: 0;
-		    color: inherit;
+		    color: #ffffff;
 		    &.subheading {
 		    	text-transform: none;
 		    }
@@ -695,6 +704,7 @@ section {
 		margin-top: 25px;
 		margin-bottom: 0;
 		text-transform: none;
+		color: @brand-danger;
 	}
 	p {
 		margin-top: 0;
@@ -703,9 +713,35 @@ section {
 
 // Clients Aside
 
-aside.clients {
+aside.partners {
+
 	img {
 		margin: 50px auto;
+		height: 40px;
+	}
+
+	img.bangalorejs {
+		height: 90px;
+	}
+
+	h1 {
+		margin: 50px auto;
+		color: black;
+		text-transform: none;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	h1.jsconf {
+		font-family: "Poiret One", cursive;
+	}
+
+	h1:hover {
+		opacity: 0.5; 
+	}
+
+	img:hover {
+		opacity: 0.5; 
 	}
 }
 

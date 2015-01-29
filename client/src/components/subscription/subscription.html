@@ -1,0 +1,11 @@
+<div class="col-md-7 book-ticket" id="book-ticket">
+  <form ng-submit="subscribeUser()" method="post" class="horizontal-form" novalidate>
+    <div class="inline-block">
+      <div class="silver">
+        <input type="email" ng-model="user.email" name="email" placeholder="Enter your email address" class="block-input margin-right">
+        <button type="submit" ng-disabled="user.submitting" class="btn btn-primary button-shadow" id="subscribe" target="_blank">Subscribe to updates</button>
+      </div>
+    </div>
+  </form>
+  <h4 class="subscripition hidden">Thanks for subscribing to our Newsletter!</h4>
+</div>

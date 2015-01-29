@@ -2,18 +2,19 @@
 'use strict';
 
 var Static = require('./static'),
-		meetup = require('./lib/controllers/meetup')
+		meetup = require('./lib/controllers/meetup'),
+		user = require('./lib/controllers/user');
 
 // API Server Endpoints
 exports.endpoints = [
 	{ method: 'GET',  
 		path: '/{params*}', 
-		config: Static.get },
+		config: Static.get 
+	},
 	{ method: 'GET', 
 		path: '/api/meetups', 
 		config: {
 			handler: meetup.meetups
-			// cors: {origin: ['http://localhost:8000']}
 		}
 	},
 	{ method: 'GET', 
@@ -21,9 +22,21 @@ exports.endpoints = [
 		config: {
 			handler: meetup.details
 		}
-	}//,
-	// {
-	// 	method: 'POST',
-	// 	path: '/api/subscribes'
-	// }
+	},
+	{ method: 'GET', 
+		path: '/api/meetups/all', 
+		config: {
+			handler: meetup.all
+		}
+	},
+	{
+		method: 'POST',
+		path: '/api/users/subscribe',
+		config: user.subscribe
+	},
+	{
+		method: 'GET',
+		path: '/api/users/unsubscribe',
+		config: user.unsubscribe
+	}
 ];

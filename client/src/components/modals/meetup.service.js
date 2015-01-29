@@ -4,7 +4,7 @@ angular.module('jschannel').service('MeetupService', function($q, $http) {
 
 	function all() {
 	  var deferred = $q.defer(),
-	      url      = 'http://localhost:5000/api/meetups';
+	      url      = '/api/meetups';
 	  $http.get(url).then(function (resp) {
 	    deferred.resolve(resp.data)
 	  }, function (err) {
@@ -16,7 +16,7 @@ angular.module('jschannel').service('MeetupService', function($q, $http) {
 
 	function events(params) {
 		var deferred = $q.defer(),
-		    url      = 'http://localhost:5000/api/meetups/:group_name';
+		    url      = '/api/meetups/:group_name';
 
 		url = url.replace(':group_name', params.group_name);
 
