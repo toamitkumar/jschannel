@@ -7,22 +7,26 @@ angular.module('jschannel')
 			scope: {},
 			templateUrl: 'components/subscription/subscription.html',
 			link: function(scope, element) {
-				scope.subscribeUser = function() {
-				  // http://localhost:5000/api/users/subscribe
-				  console.log('submitted', user.email);
-				  console.log('element', element)
+				scope.user = {
+					email: '',
+					submitting: false
+				};
 
+				scope.subscribeUser = function() {
 				  if(scope.user.email !== undefined) {
-				  	var url = 'http://localhost:5000/api/users/subscribe';
+				  	var url = '/api/users/subscribe';
 
 						scope.submitting = true;				  	    
-				  	$http.post(url, {email: user.email})
-				  	.success(function(data, status) {
+				  	$http.post(url, {email: scope.user.email})
+				  	.success(function(data) {
 				  		scope.submitting = false;
-
+				  		$('#subscribe').children('form').hide();
+				  		$('#subscribe').children('h4').html(data.message).removeClass('hidden');
 				  	})
-				  	.error(function(data, status) {
+				  	.error(function(data) {
 				  		scope.submitting = false;
+				  		$('#subscribe').children('form').hide();
+				  		$('#subscribe').children('h4').html(data.message).removeClass('hidden');
 				  	});
 				  }
 				};
