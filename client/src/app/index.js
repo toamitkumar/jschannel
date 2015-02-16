@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('jschannel', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute', 'ui.bootstrap', 'duScroll'])
+angular.module('jschannel', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute', 'ui.bootstrap', 'duScroll', 'angularSpinner'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
