@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-darkest-gray {
-	background-image: url('../assets/images/header-bg.jpg');
+	background-image: url('../assets/images/14830474230_633382cfc9_k.jpg');
   background-repeat: none;
   background-attachment: fixed;
   background-position: center center;
@@ -284,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-	background-image: url('../assets/images/header-bg.jpg');
+	background-image: url('../assets/images/14830474230_633382cfc9_k.jpg');
 	background-repeat: none;
 	background-attachment: fixed;
 	background-position: center center;
@@ -349,7 +349,7 @@ section {
 			font-size: 40px;
 			margin-top: 0;
 			margin-bottom: 15px;
-			color: @gray-darkest;
+			color: @white;
     }
     h3.section-subheading {
 		font-size: 16px;
@@ -359,11 +359,14 @@ section {
 		font-weight: 400;
 		margin-bottom: 75px;
     }
+    -webkit-box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
+    -moz-box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
+    box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
 }
 
 @media(min-width:768px) {
 	section {
-		padding: 150px 0;
+		padding: 100px 0;
 	}
 }
 
@@ -625,7 +628,7 @@ section {
 	.timeline-heading {
 		h4 {
 		    margin-top: 0;
-		    color: @gray-darkest;
+		    color: #EF7247;
 		    &.subheading {
 		    	text-transform: none;
 		    }
@@ -735,16 +738,38 @@ section {
 		margin-top: 25px;
 		margin-bottom: 0;
 		text-transform: none;
-		color: @gray-darkest;
+		color: #EF7247;
 	}
 	p {
 		margin-top: 0;
 	}
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: medium none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+hr.divider-short {
+  border-top: 3px solid @white;
+  clear: both;
+  font-size: 0;
+  height: 1px;
+  line-height: 0;
+  margin: 15px auto;
+  width: 60px;
 }
 
 // Clients Aside
 
 aside.partners {
+  -webkit-box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
+  -moz-box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
+  box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
 
 	img {
 		margin: 50px auto;
@@ -831,6 +856,10 @@ section#contact {
 // Footer
 
 footer {
+  -webkit-box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
+  -moz-box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
+  box-shadow: 0 5px 0 rgba(30, 38, 44, .2) inset;
+
 	padding: 25px 0;
 	text-align: center;
 	span.copyright {
