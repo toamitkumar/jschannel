@@ -139,6 +139,11 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('dist/fonts/'));
 });
 
+gulp.task('doc', function() {
+  return gulp.src('src/assets/docs/*')
+    .pipe(gulp.dest('dist/assets/docs'));
+});
+
 gulp.task('misc', function () {
   return gulp.src('src/**/*.ico')
     .pipe(gulp.dest('dist/'));
@@ -148,4 +153,4 @@ gulp.task('clean', function (done) {
   $.del(['dist/', '.tmp/'], done);
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'misc']);
+gulp.task('build', ['html', 'images', 'fonts', 'misc', 'doc']);

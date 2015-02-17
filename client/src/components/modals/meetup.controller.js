@@ -10,7 +10,7 @@ angular.module('jschannel')
 			MeetupService.all().then(function(data) {
 				usSpinnerService.stop('spinner-1');
 				$scope.meetups = data;
-			}, function(err) {
+			}, function() {
 				usSpinnerService.stop('spinner-1');
 				$scope.meetups = [];
 			});

@@ -6,7 +6,7 @@ angular.module('jschannel')
 			restrict: 'AE',
 			scope: {},
 			templateUrl: 'components/subscription/subscription.html',
-			link: function(scope, element) {
+			link: function(scope) {
 				scope.user = {
 					email: '',
 					submitting: false

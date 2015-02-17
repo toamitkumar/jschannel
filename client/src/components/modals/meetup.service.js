@@ -4,9 +4,9 @@ angular.module('jschannel').service('MeetupService', function($q, $http) {
 
 	function all() {
 	  var deferred = $q.defer(),
-	      url      = 'http://localhost:5000/api/meetups/all';
+	      url      = '/api/meetups/all';
 	  $http.get(url).then(function (resp) {
-	    deferred.resolve(resp.data)
+	    deferred.resolve(resp.data);
 	  }, function (err) {
 	    deferred.reject(err);
 	  });
@@ -21,7 +21,7 @@ angular.module('jschannel').service('MeetupService', function($q, $http) {
 		url = url.replace(':group_name', params.group_name);
 
 		$http.get(url).then(function (resp) {
-		  deferred.resolve(resp.data)
+		  deferred.resolve(resp.data);
 		}, function (err) {
 		  deferred.reject(err);
 		});
@@ -32,7 +32,7 @@ angular.module('jschannel').service('MeetupService', function($q, $http) {
 	return {
 		all: all,
 		events: events
-	}
+	};
 
 
 });
