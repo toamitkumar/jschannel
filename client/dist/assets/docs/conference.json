@@ -371,6 +371,10 @@
     "venue":{  
         "events":"Conference 2015",
         "venue":"Bengaluru",
-        "date":"17-18 July"
+        "date":"17-18 July",
+        "lat": 12.9732486,
+        "long": 77.6197981,
+        "content": "<p>Hotel Taj Vivanta,M.G Road,Bengaluru</p>",
+        "title": "Hotel Taj Vivanta,M.G Road,Bengaluru"
     }
 }
