@@ -11,7 +11,7 @@ var app = {};
 
 var port = process.env.PORT || 5000;
 var server = new Hapi.Server();
-server.connection({ port: port, routes: {cors: true}});
+server.connection({ port: port, routes: {cors: {origin: ['*'], headers: ['Content-Type'], methods: ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'OPTIONS']}}});
 
 server.route(Routes.endpoints);
 

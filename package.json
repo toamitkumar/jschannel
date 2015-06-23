@@ -20,7 +20,7 @@
   "dependencies": {
     "async": "*",
     "boom": "^2.6.1",
-    "hapi": "^8.1.0",
+    "hapi": "^8.6.1",
     "joi": "^5.1.0",
     "lodash": "*",
     "mongoose": "^3.8.21",
