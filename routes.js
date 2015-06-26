@@ -3,7 +3,8 @@
 
 var Static = require('./static'),
 		meetup = require('./lib/controllers/meetup'),
-		user = require('./lib/controllers/user');
+		user = require('./lib/controllers/user'),
+		conference = require('./lib/controllers/conference');
 
 // API Server Endpoints
 exports.endpoints = [
@@ -38,5 +39,12 @@ exports.endpoints = [
 		method: 'GET',
 		path: '/api/users/unsubscribe',
 		config: user.unsubscribe
+	},
+	{
+		method: 'GET',
+		path: '/api/conference',
+		config: {
+			handler: conference.getData
+		}
 	}
 ];
