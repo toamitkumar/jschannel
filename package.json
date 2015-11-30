@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "npm test"
+    "test": "./node_modules/.bin/lab -c -L -t 95 -v"
   },
   "keywords": [
     "jschannel"
@@ -26,5 +26,9 @@
     "mongoose": "^3.8.21",
     "qs": "*",
     "superagent": "^0.21.0"
+  },
+  "devDependencies": {
+    "code": "^1.x.x",
+    "lab": "^5.x.x"
   }
 }
